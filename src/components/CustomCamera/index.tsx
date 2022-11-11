@@ -9,11 +9,16 @@ export const CustomCamera = () => {
 
   const videoWidth = window.innerWidth - 100;
   const videoHeight = window.innerHeight - 100;
-  console.log({ videoHeight, videoWidth });
 
-  console.log({ hasPhoto });
 
+
+  useEffect(() => {
+    
   const getVideo = () => {
+    
+
+  console.log({ videoHeight, videoWidth });
+  console.log({ hasPhoto });
     console.log(navigator.mediaDevices.getSupportedConstraints());
     navigator.mediaDevices
       .getUserMedia({
@@ -28,13 +33,13 @@ export const CustomCamera = () => {
       .catch((e) => console.error(e));
   };
 
-  useEffect(() => {
     setIsVideoReady(false);
     getVideo();
-  }, [videoRef]);
+    /* @ts-ignore */
+  }, [videoRef, videoWidth, videoHeight, hasPhoto]);
 
   const takePhoto = () => {
-    const width = 300;
+    // const width = 300;
     // const height = width / (16 / 9);
     let video: any = videoRef.current;
     const photoHeight = video.offsetHeight
