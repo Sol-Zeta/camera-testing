@@ -1,0 +1,22 @@
+.modalBackground {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 100;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    border-radius: 10px;
+    height: 300px;
+    width: 80vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
