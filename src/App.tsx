@@ -19,7 +19,7 @@ function App() {
 
   const config = {
     bucketName: process.env.AWS_BUCKET,
-    region: process.env.AWS_REGION,
+    region: process.env.REGION,
     // accessKeyId: 'ANEIFNENI4324N2NIEXAMPLE',
     // secretAccessKey: 'cms21uMxçduyUxYjeg20+DEkgDxe6veFosBT7eUgEXAMPLE',
 }
