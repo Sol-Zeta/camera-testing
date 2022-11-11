@@ -3,7 +3,7 @@ import Webcam from "react-webcam";
 import "./index.css";
 
 export const ReactWebCam = () => {
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
   const [picture, setPicture] = useState("");
 
   const supported = 'mediaDevices' in navigator;
@@ -12,6 +12,7 @@ export const ReactWebCam = () => {
     width: { min: 200 },
     height: { min: 400 },
     aspectRatio: 0.6666666667,
+    facingMode: "environment"
   };
 
   const webcamRef = React.useRef(null);
@@ -42,6 +43,7 @@ export const ReactWebCam = () => {
             videoConstraints={videoConstraints}
             width={480}
             height={720}
+            onUserMedia={()=>setOpenModal(true)}
           />
           <button onClick={openModal ? undefined : capture}>
             Capture photo

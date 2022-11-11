@@ -22,7 +22,7 @@ export const CustomCamera = () => {
     console.log(navigator.mediaDevices.getSupportedConstraints());
     navigator.mediaDevices
       .getUserMedia({
-        video: { width: videoWidth, height: videoHeight },
+        video: { width: videoWidth, height: videoHeight, facingMode: "environment" },
       })
       .then((stream) => {
         let video: any = videoRef.current;
