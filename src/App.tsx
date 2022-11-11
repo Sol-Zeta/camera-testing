@@ -39,8 +39,8 @@ function App() {
   const sendPicture = () => {
     console.log(pictureToSend, config)
     uploadFile(pictureToSend, config)
-    .then((data: any) => console.log(data))
-    .catch((err: any) => console.error(err))
+    .then((data: any) => alert(data))
+    .catch((err: any) => alert(err))
   }
 
   return (
