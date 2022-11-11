@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 /* @ts-ignore */
 // import S3FileUpload from 'react-s3';
 import { uploadFile } from 'react-s3';

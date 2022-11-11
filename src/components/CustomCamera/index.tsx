@@ -35,7 +35,7 @@ export const CustomCamera = () => {
 
   const takePhoto = () => {
     const width = 300;
-    const height = width / (16 / 9);
+    // const height = width / (16 / 9);
     let video: any = videoRef.current;
     const photoHeight = video.offsetHeight
       ? video.offsetWidth * 0.5
